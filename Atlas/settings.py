@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xrzrr#m1dm&*n^#l-6#y28r!3)b)2%w@!z#pu+f5f0i8+x==5_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'alfaraby.herokuapp.com']
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'pharma_casa/templates'),
 )
