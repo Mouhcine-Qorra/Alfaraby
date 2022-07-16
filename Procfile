@@ -1,0 +1,1 @@
+web: gunicorn Atlas.wsgi --log-file -
