@@ -22,6 +22,7 @@
 <title>Alfaraby Drugs Center - Bouzkoura | Home Page 01</title>
 
 <!-- Stylesheets -->
+<link href="{% static 'css/langSelector.css' %}" rel="stylesheet">
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
 <link href="{% static 'css/icomoon-icons.css' %}" rel="stylesheet">
@@ -38,6 +39,23 @@
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="{% static 'js/respond.js' %}"></script><![endif]-->
+
+
+
+<style>
+	.selected-lang:before {
+		background-image: url('{% static 'images/flags/united-states-1.png' %}');
+	}
+	.en:before {
+		background-image: url('{% static 'images/flags/united-states-1.png' %}');
+	}
+	.fr:before {
+		background-image: url('{% static 'images/flags/france-1.png' %}');
+	}
+	.ar:before {
+		background-image: url('{% static 'images/flags/morocco-1.png' %}');
+	}
+</style>
 </head>
 
 <body>
@@ -64,7 +82,24 @@
 
 						<!-- Cart Button -->
 						<div class="cart-btn">
-							<a href="#" class="flaticon-cart offset-side-bar cart-icon"><span class="total-cart">3</span></a>
+
+							<div class="lang-menu">
+								<div class="selected-lang">
+									English
+								</div>
+								<ul>
+									<li>
+										<a href="" class="en">English</a>
+									</li>
+									<li>
+										<a href="" class="fr">French</a>
+									</li>
+									<li>
+										<a href="" class="ar">Arabic</a>
+									</li>
+								</ul>
+							</div>
+
 						</div>
 
 						<!-- Main Menu End-->
@@ -168,7 +203,7 @@
 									</ul>
 								</li>
 
-								<li><a href="#">Partners</a>
+								<li><a href="{% url 'partners' %}">Partners</a>
 								</li>
 
 								<li><a href="contact.html">Contact</a></li>
