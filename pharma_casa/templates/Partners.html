@@ -2,35 +2,528 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our - Partners</title>
-    <link rel="stylesheet" href="{% static 'css/Partners.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- Meta -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Our - Partners</title>
+<link rel="stylesheet" href="{% static 'css/Partners.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 
-    
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Testimonials/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/Testimonials/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/Testimonials/responsive.css' %}" rel="stylesheet" />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+
+<!-- Stylesheets -->
+<link href="{% static 'css/langSelector.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+<link href="{% static 'css/icomoon-icons.css' %}" rel="stylesheet">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.css' %}" rel="stylesheet">
+<link href="{% static 'css/animation.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/magnific.popup.css' %}">
+<link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/menu.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="{% static 'js/respond.js' %}"></script><![endif]-->
+
+<style>
+    .contact_section .detail-box {
+        background-image: url('{% static 'images/Testimonials/contact-bg.jpg' %}');
+    }
+	.header-upper:after {
+		content: "";
+		background: -webkit-linear-gradient(left, #1DB9A0 0%, #4d94c4 100%);
+		display: block;
+		height: 3px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.selected-lang:before {
+		background-image: url('{% static 'images/flags/united-states-1.png' %}');
+	}
+	.en:before {
+		background-image: url('{% static 'images/flags/united-states-1.png' %}');
+	}
+	.fr:before {
+		background-image: url('{% static 'images/flags/france-1.png' %}');
+	}
+	.ar:before {
+		background-image: url('{% static 'images/flags/morocco-1.png' %}');
+	}
+</style>
+
 </head>
 <body>
-        <div class="container font-weight-bold">
-            <h2 class="text-center font-weight-bold">Our  Partners</h2>
-            <section class="customer-logos slider">
-                <div class="slide"><img src="{% static 'images/Partners/adidas.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/facebook.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/google.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/instagram.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/nike.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/twitter.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/uber.png' %}" alt=""></div>
-                <div class="slide"><img src="{% static 'images/Partners/youtube.png' %}" alt=""></div>
-            </section>
+
+
+	<!-- header section -->
+    <header class="elementskit-header main-header">
+
+        <div class="header-top">
+			<div class="container ">
+				<div class="top-outer clearfix">
+					<!-- Top Left -->
+					<ul class="top-left">
+						<li><a href="tel:+212522027631"><span class="icon flaticon-phone-receiver"></span>Phone: +212-(0)-522-027-631</a></li>
+						<li><span class="icon flaticon-clock-1"></span>Mon-Fri (8am - 6pm)</li>
+						<li><a href="mailto:contact@alfarabydrugs.ma"><span class="icon flaticon-letter"></span>Contact@Alfarabydrugs.ma</a></li>
+					</ul>
+
+					<!-- Top Right -->
+					<div class="top-right clearfix">
+
+						<!-- Cart Button -->
+						<div class="cart-btn">
+
+							<div class="lang-menu">
+								<div class="selected-lang">
+									English
+								</div>
+								<ul>
+									<li>
+										<a href="" class="en">English</a>
+									</li>
+									<li>
+										<a href="" class="fr">French</a>
+									</li>
+									<li>
+										<a href="" class="ar">Arabic</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+
+						<!-- Main Menu End-->
+						<div class="nav-box">
+							<div class="nav-btn nav-toggler navSidebar-button"><span class="icon flaticon-menu-3"></span></div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
         </div>
+        <!-- End Header Top -->
+
+		<!-- Header Upper -->
+        <div class="header-upper"> <!-- xs-container -->
+			<div class="container">
+				<div class="xs-navbar clearfix">
+
+					<div class="logo-outer">
+						<div class="logo"><a href="index.html"><img src="{% static 'images/logo.png' %}" alt="" title=""></a></div>
+					</div>
+
+					<nav class="elementskit-navbar">
+
+						<!-- ---------------------------------------
+									// god menu markup start
+								---------------------------------------- -->
+
+						<div class="xs-mobile-search">
+							<a href="#modal-popup-2" class="xs-modal-popup"><i class="icon icon-search"></i></a>
+						</div>
+
+						<!-- start humberger (for offcanvas toggler) -->
+						<button class=" elementskit-menu-toggler xs-bold-menu">
+
+							<div class="xs-gradient-group">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<span>
+                                Menu
+                            </span>
+						</button>
+						<!-- end humberger -->
+
+						<!-- start menu container -->
+						<div class="elementskit-menu-container elementskit-menu-offcanvas-elements">
+
+							<!-- start menu item list -->
+							<ul class="elementskit-navbar-nav nav-alignment-dynamic">
+								<li class="elementskit-dropdown-has">
+									<a href="#">Home</a>
+									<ul class="elementskit-dropdown elementskit-submenu-panel">
+										<li class="active"><a href="index.html">Home page 01</a></li>
+										<li><a href="index-2.html">Home page 02</a></li>
+										<li><a href="index-3.html">Home page 03</a></li>
+										<li><a href="onepage-1.html">One Page 01</a></li>
+										<li><a href="onepage-2.html">One Page 02</a></li>
+										<li><a href="onepage-3.html">One Page 03</a></li>
+										<li class="elementskit-dropdown-has"><a href="#">Header Style</a>
+											<ul class="elementskit-dropdown elementskit-submenu-panel">
+												<li class="active"><a href="index.html">Header Style 01</a></li>
+												<li><a href="index-2.html">Header Style 02</a></li>
+												<li><a href="index-3.html">Header Style 03</a></li>
+												<li class="elementskit-dropdown-has"><a href="#">Home Pages</a>
+													<ul
+														class="elementskit-dropdown elementskit-submenu-panel open-fromleft">
+														<li class="active"><a href="index.html">Home page 01</a></li>
+														<li><a href="index-2.html">Home page 02</a></li>
+														<li><a href="index-3.html">Home page 03</a></li>
+														<li class="elementskit-dropdown-has"><a href="#">Header Style</a>
+															<ul class="elementskit-dropdown elementskit-submenu-panel">
+																<li><a href="index.html">Header Style 01</a></li>
+																<li><a href="index-2.html">Header Style 02</a></li>
+																<li><a href="index-3.html">Header Style 03</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+								<li class="elementskit-dropdown-has"><a href="#">About</a>
+									<ul class="elementskit-dropdown elementskit-submenu-panel">
+										<li><a href="about.html">About</a></li>
+										<li><a href="pricing.html">Locations</a></li>
+										<li><a href="appointment.html">Appointment</a></li>
+									</ul>
+								</li>
+
+								<li><a href="department.html">Products</a></li>
+
+								<li class="elementskit-dropdown-has"><a href="#">Activities</a>
+									<ul class="elementskit-dropdown elementskit-submenu-panel">
+										<li><a href="doctor.html">News & Activities</a></li>
+										<li><a href="doctor-detail.html">Research & Development</a></li>
+									</ul>
+								</li>
+
+								<li><a href="{% url 'partners' %}">Partners</a>
+								</li>
+
+								<li><a href="contact.html">Contact</a></li>
+
+								<li class="elementskit-megamenu-has elementskit-dropdown-has">
+									<a href="#">Megamenu</a>
+									<ul class="elementskit-dropdown elementskit-megamenu-panel">
+										<li>
+											<ul class="megamenu_lists">
+												<li><a href="index.html">Home page 01</a></li>
+												<li><a href="index-2.html">Home page 02</a></li>
+												<li><a href="index-3.html">Home page 03</a></li>
+											</ul>
+										</li>
+										<li>
+											<ul class="megamenu_lists">
+												<li><a href="about.html">About</a></li>
+												<li><a href="pricing.html">Locations</a></li>
+												<li><a href="appointment.html">Appointment</a></li>
+											</ul>
+										</li>
+										<li>
+											<ul class="megamenu_lists">
+												<li><a href="department.html">Products</a></li>
+												<li><a href="doctor.html">News & Activities</a></li>
+												<li><a href="doctor-detail.html">Research & Development</a></li>
+											</ul>
+										</li>
+										<li>
+											<ul class="megamenu_lists">
+												<li><a href="index.html">Home page 01</a></li>
+												<li><a href="index-2.html">Home page 02</a></li>
+												<li><a href="index-3.html">Home page 03</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul> <!-- end menu item list -->
 
 
-    <p class="copy text-center font-weight-bold">All Rights Reserved &copy; Make Dev</p>
+							<!-- start menu logo and close button (for mobile offcanvas menu) -->
+							<div class="elementskit-nav-identity-panel">
+								<h1 class="elementskit-site-title">
+									<a href="#" class="elementskit-nav-logo">Megamenu</a>
+								</h1>
+								<button class="elementskit-menu-close elementskit-menu-toggler" type="button"><i class="icon icon-cross"></i></button>
+							</div>
+							<!-- end menu logo and close button -->
+
+						</div>
+						<!-- end menu container -->
+
+						<!-- start offcanvas overlay -->
+						<div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler">
+						</div>
+						<!-- end offcanvas overlay -->
+						<!-- ---------------------------------------
+									// god menu markup end
+								---------------------------------------- -->
+
+					</nav>
+					<ul class="xs-menu-tools">
+						<li>
+							<a href="#modal-popup-2" class="navsearch-button xs-modal-popup"><i class="icon icon-search"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- .container END -->
+    </header><!-- End header section -->
+
+    <div class="container font-weight-bold underline" style="margin-top: 7rem;">
+        <h2 class="text-center font-weight-bold" style="color:#4d94c4;">Our  Partners</h2>
+        <section class="customer-logos slider">
+            <div class="slide"><img src="{% static 'images/Partners/adidas.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/facebook.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/google.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/instagram.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/nike.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/twitter.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/uber.png' %}" alt=""></div>
+            <div class="slide"><img src="{% static 'images/Partners/youtube.png' %}" alt=""></div>
+        </section>
+    </div>
+
+
+
+  <!-- client section From pharmminder-master -->
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container ">
+        <h2 class="text-center font-weight-bold" style="color:#4d94c4;">
+          What is says our clients
+        </h2>
+      </div>
+      <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>
+          <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_container layout_padding2">
+              <div class="client_detail">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in
+                  some form, by injected humour, or randomised words which don't look even slightly believable.
+                </p>
+              </div>
+              <div class="client_box ">
+                <div class="img-box">
+                  <img src="{% static 'images/Testimonials/client.png' %}" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Randomised
+                  </h5>
+                  <h6>
+                    <span>
+                      Client
+                    </span>
+                    <img src="{% static 'images/Testimonials/quote.png' %}" alt="">
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding2">
+              <div class="client_detail">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in
+                  some form, by injected humour, or randomised words which don't look even slightly believable.
+                </p>
+              </div>
+              <div class="client_box ">
+                <div class="img-box">
+                  <img src="{% static 'images/Testimonials/client.png' %}" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Randomised
+                  </h5>
+                  <h6>
+                    <span>
+                      Client
+                    </span>
+                    <img src="{% static 'images/Testimonials/quote.png' %}" alt="">
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding2">
+              <div class="client_detail">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in
+                  some form, by injected humour, or randomised words which don't look even slightly believable.
+                </p>
+              </div>
+              <div class="client_box ">
+                <div class="img-box">
+                  <img src="{% static 'images/Testimonials/client.png' %}" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Randomised
+                  </h5>
+                  <h6>
+                    <span>
+                      Client
+                    </span>
+                    <img src="{% static 'images/Testimonials/quote.png' %}" alt="">
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- end client section -->
+
+  <!-- contact section -->
+  <section class="contact_section">
+    <div class="container">
+      <div class="row">
+        <div class="custom_heading-container ">
+          <h2 class="text-center font-weight-bold" style="color:#4d94c4;">
+            Request A call back
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="container layout_padding2">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form_contaier">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputName1">Name</label>
+                <input type="text" class="form-control" id="exampleInputName1">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputNumber1">Phone Number</label>
+                <input type="text" class="form-control" id="exampleInputNumber1">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email </label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="form-group ">
+                <label for="inputState">Select medicine</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Medicine 1</option>
+                  <option selected>Medicine 2</option>
+                  <option selected>Medicine 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputMessage">Message</label>
+                <input type="text" class="form-control" id="exampleInputMessage">
+              </div>
+              <button type="submit" class="">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <h3>
+              Get Now Medicines
+            </h3>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <script type="text/javascript" src="{% static 'js/Testimonials/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script>
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 25,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      responsiveClass:true,
+
+      responsive: {
+        0: {
+          items: 1,
+          nav:true
+        },
+        600: {
+          items: 3,
+          nav:true
+        },
+        1000: {
+          items:5,
+            nav:true,
+        }
+      }
+    });
+  </script>
     
     <script>
 

@@ -40,8 +40,6 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="{% static 'js/respond.js' %}"></script><![endif]-->
 
-
-
 <style>
 	.selected-lang:before {
 		background-image: url('{% static 'images/flags/united-states-1.png' %}');
@@ -56,8 +54,8 @@
 		background-image: url('{% static 'images/flags/morocco-1.png' %}');
 	}
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="page-wrapper">
@@ -203,7 +201,7 @@
 									</ul>
 								</li>
 
-								<li><a href="{% url 'partners' %}">Partners</a>
+								<li><a target="_blank" href="{% url 'partners' %}">Partners</a>
 								</li>
 
 								<li><a href="contact.html">Contact</a></li>

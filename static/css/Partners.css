@@ -1,15 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
-  font-family: 'Poppins', sans-serif !important;
-  background:#EFF3F8 !important;
-}
-.container{
-  padding-top: 150px;
-}
-h2{
-  text-align:center;
-  padding: 20px;
-}
 
 
 .slick-slide {

@@ -40,7 +40,7 @@
     background-color: #fff;
     border: 1px solid #f8f8f8;
     position: absolute;
-    top: 45px;
+    padding-top: 2px;
     right: 0px;
     width: 125px;
     border-radius: 5px;
@@ -57,6 +57,7 @@
 
 .lang-menu ul li a {
     text-decoration: none;
+    user-select: none;
     width: 125px;
     padding: 5px 10px;
     display: block;

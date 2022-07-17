@@ -9615,6 +9615,9 @@ img{
 	border:none;
 	padding:25px 0px 20px;
 }
+.bottom-header{
+	color:none;
+}
 
 .elementskit-dropdown{
 	transition: all 600ms ease;
