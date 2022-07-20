@@ -96,6 +96,18 @@
 	.ar:before {
 		background-image: url('{% static 'images/flags/morocco-1.png' %}');
 	}
+
+
+	/* reduce logo's height */
+	@media screen and (max-width: 1000px){
+
+		#logo{
+			display: none;
+		}
+		#smalllogo{
+			display: block;
+		}
+	}
 </style>
 
 </head>
@@ -158,7 +170,12 @@
 				<div class="xs-navbar clearfix">
 
 					<div class="logo-outer">
-						<div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/Alfaraby full logo.png' %}" alt="" title=""></a></div>
+						<div class="logo">
+							<a href="{% url 'home' %}">
+								<img id="logo" src="{% static 'images/Alfaraby full logo.png' %}" alt="" title="">
+								<img id="smalllogo" src="{% static 'images/Alfaraby small logo.png' %}" alt="" title="">
+							</a>
+						</div>
 					</div>
 
 					<nav class="elementskit-navbar">

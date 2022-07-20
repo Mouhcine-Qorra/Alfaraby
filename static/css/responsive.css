@@ -322,7 +322,7 @@
 	}
 	
 	.main-header .header-upper .elementskit-menu-container{
-		position:fixed;
+		position:static;
 		float:none;
 	}
 	
