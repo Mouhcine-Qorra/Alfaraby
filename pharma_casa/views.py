@@ -9,3 +9,7 @@ def home(request):
 
 def partners(request):
     return render(request, 'Partners.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
