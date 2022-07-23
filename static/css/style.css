@@ -9113,8 +9113,11 @@ img{
 }
 
 .elementskit-header{
-	position:relative;
+	position:fixed;
 	z-index:10;
+	margin-left: auto;
+    margin-right: auto;
+    width: inherit;
 }
 
 .main-header .elementskit-navbar-nav > li{

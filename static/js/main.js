@@ -45,8 +45,15 @@ jQuery(document).ready(function ($) {
 		}else{
 			off_canvas_class.addClass('active');
 		}
-
 	});
 
+});
+// end ready function
 
-}); // end ready function
+
+
+// calcul header's height
+window.onload = function () {
+    var heightHeader = document.getElementById('heightHeader').offsetHeight;
+    document.getElementById("marginTopHeader").style.marginTop = heightHeader+"px";
+};
