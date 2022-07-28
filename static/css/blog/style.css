@@ -1914,6 +1914,10 @@ ol {
 	margin-right: 20px;
 }
 
+.blog__sidebar__recent__item__pic img{
+	width: 100px;
+}
+
 .blog__sidebar__recent__item__text {
 	overflow: hidden;
 }

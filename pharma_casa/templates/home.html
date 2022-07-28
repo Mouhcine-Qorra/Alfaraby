@@ -1,3 +1,6 @@
+<!--dropdown in header (avtivities...) disapear quickly -->
+<!--Menu not cliquable in all other pages except home -->
+<!--Check header's home in every device (if dropdown is removed) -->
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -8,6 +11,7 @@
 <meta name="keywords" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" href="{% static 'images/footer-logo.png' %}">
 
 <link href="https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -19,7 +23,7 @@
 <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 
-<title>Alfaraby Drugs Center - Bouzkoura | Home Page 01</title>
+<title>Alfaraby Drugs Center - Bouzkoura | Home Page</title>
 
 <!-- Stylesheets -->
 <link href="{% static 'css/langSelector.css' %}" rel="stylesheet">
@@ -166,45 +170,14 @@
 
 							<!-- start menu item list -->
 							<ul class="elementskit-navbar-nav nav-alignment-dynamic">
-								<li class="elementskit-dropdown-has">
-									<a href="#">Home</a>
-									<ul class="elementskit-dropdown elementskit-submenu-panel">
-										<li class="active"><a href="{% url 'home' %}">Home page 01</a></li>
-										<li><a href="{% url 'home' %}">Home page 02</a></li>
-										<li><a href="{% url 'home' %}">Home page 03</a></li>
-										<li><a href="{% url 'home' %}">One Page 01</a></li>
-										<li><a href="{% url 'home' %}">One Page 02</a></li>
-										<li><a href="{% url 'home' %}">One Page 03</a></li>
-										<li class="elementskit-dropdown-has"><a href="#">Header Style</a>
-											<ul class="elementskit-dropdown elementskit-submenu-panel">
-												<li class="active"><a href="{% url 'home' %}">Header Style 01</a></li>
-												<li><a href="{% url 'home' %}">Header Style 02</a></li>
-												<li><a href="{% url 'home' %}">Header Style 03</a></li>
-												<li class="elementskit-dropdown-has"><a href="#">Home Pages</a>
-													<ul
-														class="elementskit-dropdown elementskit-submenu-panel open-fromleft">
-														<li class="active"><a href="{% url 'home' %}">Home page 01</a></li>
-														<li><a href="{% url 'home' %}">Home page 02</a></li>
-														<li><a href="{% url 'home' %}">Home page 03</a></li>
-														<li class="elementskit-dropdown-has"><a href="#">Header Style</a>
-															<ul class="elementskit-dropdown elementskit-submenu-panel">
-																<li><a href="{% url 'home' %}">Header Style 01</a></li>
-																<li><a href="{% url 'home' %}">Header Style 02</a></li>
-																<li><a href="{% url 'home' %}">Header Style 03</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
+								<li>
+									<a href="{% url 'home' %}">Home</a>
 								</li>
 
 								<li class="elementskit-dropdown-has"><a href="#">About</a>
 									<ul class="elementskit-dropdown elementskit-submenu-panel">
 										<li><a href="about.html">About</a></li>
-										<li><a href="pricing.html">Locations</a></li>
-										<li><a href="appointment.html">Appointment</a></li>
+										<li><a href="{% url 'contact' %}">Locations</a></li>
 									</ul>
 								</li>
 
@@ -227,30 +200,26 @@
 									<ul class="elementskit-dropdown elementskit-megamenu-panel">
 										<li>
 											<ul class="megamenu_lists">
-												<li><a href="{% url 'home' %}">Home page 01</a></li>
-												<li><a href="{% url 'home' %}">Home page 02</a></li>
-												<li><a href="{% url 'home' %}">Home page 03</a></li>
-											</ul>
-										</li>
-										<li>
-											<ul class="megamenu_lists">
-												<li><a href="about.html">About</a></li>
-												<li><a href="pricing.html">Locations</a></li>
-												<li><a href="appointment.html">Appointment</a></li>
-											</ul>
-										</li>
-										<li>
-											<ul class="megamenu_lists">
+												<li><a href="{% url 'home' %}">Home</a></li>
 												<li><a href="department.html">Products</a></li>
+											</ul>
+										</li>
+										<li>
+											<ul class="megamenu_lists">
+												<li><a href="{% url 'home' %}">About</a></li>
+												<li><a href="{% url 'contact' %}">Locations</a></li>
+											</ul>
+										</li>
+										<li>
+											<ul class="megamenu_lists">
 												<li><a href="{% url 'home' %}#newsActivities">News & Activities</a></li>
 												<li><a target="_blank" href="{% url 'blog' %}">Research & Development</a></li>
 											</ul>
 										</li>
 										<li>
 											<ul class="megamenu_lists">
-												<li><a href="{% url 'home' %}">Home page 01</a></li>
-												<li><a href="{% url 'home' %}">Home page 02</a></li>
-												<li><a href="{% url 'home' %}">Home page 03</a></li>
+												<li><a href="{% url 'partners' %}">Partners</a></li>
+												<li><a href="{% url 'contact' %}">contact</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -1941,5 +1910,13 @@
 <script src="{% static 'js/nav-tools.js' %}"></script>
 <script src="{% static 'js/appear.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
+<script>
+
+// calcul header's height
+window.onload = function () {
+    var heightHeader = document.getElementById('heightHeader').offsetHeight;
+    document.getElementById("marginTopHeader").style.marginTop = heightHeader+"px";
+};
+</script>
 </body>
 </html>
