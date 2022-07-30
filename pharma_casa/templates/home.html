@@ -68,6 +68,167 @@
 			display: block;
 		}
 	}
+
+	@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.showcase
+{
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4;
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
 </style>
 
 </head>
@@ -134,7 +295,7 @@
 
 					<div class="logo-outer">
 						<div class="logo">
-							<a href="{% url 'home' %}">
+							<a target="_blank" href="{% url 'homeA' %}">
 								<img id="logo" src="{% static 'images/Alfaraby full logo.png' %}" alt="" title="">
 								<img id="smalllogo" src="{% static 'images/Alfaraby small logo.png' %}" alt="" title="">
 							</a>
@@ -260,146 +421,21 @@
     </header><!-- End header section -->
 
     <!-- Bnner Section -->
-    <section class="banner-section" id="marginTopHeader">
-        <div class="banner-carousel owl-carousel owl-theme">
-
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url('{% static 'images/main-slider/1.jpg' %}');">
-                <div class="container xs-banner-container-parent">
-					<div class="clearfix">
-
-						<!-- Content Column -->
-						<div class="banner-column col-lg-6 col-md-12 col-sm-12">
-							<div class="title wow fadeInUp" data-wow-delay="250ms">Diagnosis</div>
-							<h2 class="wow fadeInUp" data-wow-delay="500ms">Personal care for your healthy living</h2>
-							<p class="text wow fadeInUp" data-wow-delay="750ms">Small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<div class="link-box wow fadeInUp" data-wow-delay="1000ms">
-								<a href="department.html" class="theme-btn btn-style-two"><i>Book Now</i> <span class="arrow icon icon-arrow_right"></span></a>
-							</div>
-						</div>
-
-						<!-- Image Column -->
-
-							<div class="image">
-								<img src="{% static 'images/main-slider/content-image.png' %}" alt="" />
-							</div>
-
-
-					</div>
-
-                </div>
-            </div>
-
-            <!-- Slide Item -->
-            <div class="slide-item" style="background-image: url('{% static 'images/main-slider/1.jpg' %}');">
-                <div class="container xs-banner-container-parent">
-					<div class="clearfix">
-
-						<!-- Content Column -->
-						<div class="banner-column col-lg-6 col-md-12 col-sm-12">
-							<div class="title wow fadeInUp" data-wow-delay="250ms">Diagnosis</div>
-							<h2 class="wow fadeInUp" data-wow-delay="500ms">Personal care for your healthy living</h2>
-							<p class="text wow fadeInUp" data-wow-delay="750ms">Small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<div class="link-box wow fadeInUp" data-wow-delay="1000ms">
-								<a href="department.html" class="theme-btn btn-style-two"><i>Book Now</i> <span class="arrow icon icon-arrow_right"></span></a>
-							</div>
-						</div>
-
-						<!-- Image -->
-
-							<div class="image">
-								<img src="{% static 'images/main-slider/content-image-2.png' %}" alt="" />
-							</div>
-
-
-
-					</div>
-
-                </div>
-            </div>
-
-			<!-- Slide Item -->
-            <div class="slide-item" style="background-image: url('{% static 'images/main-slider/1.jpg' %}');">
-                <div class="container xs-banner-container-parent">
-					<div class="clearfix">
-
-						<!-- Content Column -->
-						<div class="banner-column col-lg-6 col-md-12 col-sm-12">
-							<div class="title wow fadeInUp" data-wow-delay="250ms">Diagnosis</div>
-							<h2 class="wow fadeInUp" data-wow-delay="500ms">Personal care for your healthy living</h2>
-							<p class="text wow fadeInUp" data-wow-delay="750ms">Small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<div class="link-box wow fadeInUp" data-wow-delay="1000ms">
-								<a href="department.html" class="theme-btn btn-style-two"><i>Book Now</i> <span class="arrow icon icon-arrow_right"></span></a>
-							</div>
-						</div>
-
-						<!-- Image Column -->
-
-							<div class="image">
-								<img src="{% static 'images/main-slider/content-image-3.png' %}" alt="" />
-							</div>
-
-
-					</div>
-
-                </div>
-            </div>
-
+	<section class="showcase">
+        <video src="{% static 'vid.mp4' %}" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+          <h2>Never Stop To </h2>
+          <h3>Exploring The World</h3>
+          <a href="#">Explore</a>
         </div>
-    </section>
+        <ul class="social">
+          <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+          <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+  </section>
     <!-- End Bnner Section -->
-
-	<!-- Services Form Section -->
-	<section class="services-form-section">
-		<div class="image-layer" style="background-image:url('{% static 'images/background/1.png' %}')"></div>
-		<div class="container ">
-
-			<!-- Services Form -->
-			<div class="services-form">
-
-				<!--Contact Form-->
-				<form method="post" action="contact.html">
-					<div class="row">
-
-						<!--Form Group-->
-						<div class="form-group col-lg-4 col-md-6 col-sm-12">
-							<div class="map-icon fas fa-map-marker-alt"></div>
-							<div class="location-icon icon-target"></div>
-							<select class="custom-select-box">
-								<option>Select your area</option>
-								<option>Casablanca</option>
-								<option>Kenitra</option>
-								<option>Essaouira</option>
-								<option>Marrakech</option>
-							</select>
-						</div>
-
-						<!--Form Group-->
-						<div class="form-group col-lg-4 col-md-6 col-sm-12">
-							<select class="custom-select-box">
-								<option>Select Service type</option>
-								<option>Service One</option>
-								<option>Service Two</option>
-								<option>Service Three</option>
-								<option>Service Four</option>
-							</select>
-						</div>
-
-						<!--Form Group-->
-						<div class="form-group button-group col-lg-4 col-md-12 col-sm-12">
-							<div class="left-curves"></div>
-							<div class="right-curves"></div>
-							<button class="theme-btn submit-btn" type="submit" name="submit-form">Get Your Service Now</button>
-						</div>
-
-					</div>
-				</form>
-
-			</div>
-
-		</div>
-	</section>
-	<!-- End Services Form Section -->
 
 	<!-- Featured Section -->
 	<section class="featured-section">
@@ -1917,6 +1953,12 @@ window.onload = function () {
     var heightHeader = document.getElementById('heightHeader').offsetHeight;
     document.getElementById("marginTopHeader").style.marginTop = heightHeader+"px";
 };
+
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle.addEventListener('click', () => {
+        showcase.classList.toggle('active');
+    })
 </script>
 </body>
 </html>
