@@ -6,7 +6,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 def homeA(request):
-    return render(request, 'exemple.html')
+    return render(request, 'homeA.html')
 
 
 def partners(request):
