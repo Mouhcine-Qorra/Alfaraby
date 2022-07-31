@@ -51,6 +51,15 @@
 		position: absolute;
 		bottom: 0;
 	}
+	html {
+		height: -webkit-fill-available;
+	}
+	body {
+		height: -webkit-fill-available;
+	}
+	iframe {
+		width: -webkit-fill-available;
+	}
 
 	.selected-lang:before {
 		background-image: url('{% static 'images/flags/united-states-1.png' %}');
@@ -241,7 +250,7 @@
 
 <!-- PRODUCTS -->
 <h1 id="marginTopHeader">All our Products</h1>
-<iframe src="{% static 'products.pdf' %}#view=FitH&zoom=85&scrollbar=0&toolbar=0&navpanes=0" width="-webkit-fill-available" height="actual-height.px"></iframe>
+<iframe src="{% static 'products.pdf' %}#view=FitH&toolbar=0" title="Alfaraby Drugs Company Products" height="100%" ></iframe>
 <!-- End PRODUCTS section -->
 
 
