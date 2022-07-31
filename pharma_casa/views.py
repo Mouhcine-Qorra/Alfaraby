@@ -11,6 +11,10 @@ def exemple(request):
     return render(request, 'exemple.html')
 
 
+def products(request):
+    return render(request, 'products.html')
+
+
 def partners(request):
     return render(request, 'Partners.html')
 
