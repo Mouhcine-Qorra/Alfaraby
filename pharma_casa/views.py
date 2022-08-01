@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
+from django.http import FileResponse
+import os
 
 
 
@@ -29,3 +31,13 @@ def blog(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def show_pdf(request):
+    filepath = os.path.join('static', 'products.pdf')
+    fsock = open(filepath, "rb")
+    response = HttpResponse(fsock, content_type='application/pdf')
+    response['Content-Disposition'] = 'inline; filename=products.pdf'
+    #return response
+    return FileResponse(open(filepath, 'rb'), content_type='application/pdf')   # from django.http import FileResponse     for viewing only
+
