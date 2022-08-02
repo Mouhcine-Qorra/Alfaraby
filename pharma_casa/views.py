@@ -35,9 +35,9 @@ def about(request):
 
 def show_pdf(request):
     filepath = os.path.join('static', 'products.pdf')
-    fsock = open(filepath, "rb")
-    response = HttpResponse(fsock, content_type='application/pdf')
-    response['Content-Disposition'] = 'inline; filename=products.pdf'
+    # fsock = open(filepath, "rb")
+    # response = HttpResponse(fsock, content_type='application/pdf')
+    # response['Content-Disposition'] = 'inline; filename=products.pdf'
     #return response
     return FileResponse(open(filepath, 'rb'), content_type='application/pdf')   # from django.http import FileResponse     for viewing only
 
