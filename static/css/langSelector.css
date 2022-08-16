@@ -23,12 +23,14 @@
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+    color: white;
 }
 .lang-menu .selected-lang:before {
     content: '';
     display: inline-block;
     width: 32px;
-    height: 32px;
+    margin-top: 2px;
+    height: 21px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -71,7 +73,7 @@
     content: '';
     display: inline-block;
     width: 25px;
-    height: 25px;
+    height: 18px;
     vertical-align: middle;
     margin-right: 10px;
     background-size: contain;
