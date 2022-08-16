@@ -103,14 +103,14 @@
 		<div class="container ">
 			<div class="top-outer clearfix">
 				<!-- Top Left -->
-				<ul class="top-left">
+				<ul class="top-left" style="padding-bottom: 0px;">
 					<li><a href="tel:+212522027631"><span class="icon flaticon-phone-receiver"></span>Phone: +212-(0)-522-027-631</a></li>
 					<li id="Timing"><a href="#Horaire"><span class="icon flaticon-clock-1"></span>Mon-Fri (8am - 6pm)</a></li>
 					<li><a href="mailto:contact@alfarabydrugs.ma"><span class="icon flaticon-letter"></span>Contact@Alfarabydrugs.ma</a></li>
 				</ul>
 
 				<!-- Top Right -->
-				<div class="top-right clearfix">
+				<div class="top-right clearfix" style="padding-bottom: 0px;">
 
 					<!-- Cart Button -->
 					<div class="cart-btn">
@@ -136,7 +136,9 @@
 
 					<!-- Main Menu End-->
 					<div class="nav-box">
-						<div class="nav-btn nav-toggler navSidebar-button"><span class="icon flaticon-menu-3"></span></div>
+						<div class="nav-btn nav-toggler navSidebar-button" style="top: 0; position: fixed;">
+							<span class="icon flaticon-menu-3"></span>
+						</div>
 					</div>
 
 				</div>
@@ -665,7 +667,7 @@
 	// calcul header's height
 	window.onload = function () {
 		var heightHeader = document.getElementById('heightHeader').offsetHeight;
-		document.getElementById("marginTopHeader").style.marginTop = heightHeader+"px";
+		document.getElementById("marginTopHeader").style.marginTop = 0+"px";
 	};
 	</script>
 
