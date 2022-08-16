@@ -814,7 +814,7 @@ img{
 .main-header .logo-outer .logo img{
 	position:relative;
 	display:inline-block;
-	max-width:100%;
+	max-width:73%;
 }
 
 .main-header .header-upper .nav-outer{
@@ -9123,7 +9123,7 @@ img{
 
 .main-header .elementskit-navbar-nav > li{
 	margin-right:15px;
-	padding:25px 0px;
+	padding:10px 0px;
 }
 
 .main-header.header-style-two .elementskit-navbar-nav > li,
