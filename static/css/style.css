@@ -9269,11 +9269,13 @@ img{
 .main-header .elementskit-dropdown{
 	background-color:#ffffff;
 	border:3px solid #1cb89d;
+	border-radius: 13px;
 }
 
 .main-header .elementskit-submenu-panel > li{
 	position:relative;
 	border-bottom:1px solid #f9f9f9;
+	border-bottom-left-radius: inherit;
 }
 
 .main-header .elementskit-submenu-panel > li > a{
