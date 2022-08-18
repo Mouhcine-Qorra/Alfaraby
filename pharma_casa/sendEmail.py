@@ -9,7 +9,7 @@ def sendEmail(Name="", Email="", Message=""):
 
     # Create the root message and fill in the from, to, and subject headers
     sender = 'contact@maweb.ma'
-    recipients = ["qorra@mobiblanc.com", "qorra.mouhcine1@gmail.com"]
+    recipients = ["dmimadb76@outlook.com", "qorra.mouhcine1@gmail.com"]
     print(f"Sending to :\t\t{recipients}")
     print('\tGetting Parameters...')
     msgRoot = MIMEMultipart('related')
