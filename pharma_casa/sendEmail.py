@@ -5,16 +5,17 @@ from email.mime.text import MIMEText
 import datetime
 
 
-def sendEmail(receiver="qorra.mouhcine1@gmail.com", Name="", Email="", Message=""):
-    print(f"Sending to :\t\t{receiver}")
+def sendEmail(Name="", Email="", Message=""):
 
     # Create the root message and fill in the from, to, and subject headers
     sender = 'contact@maweb.ma'
+    recipients = ["qorra@mobiblanc.com", "qorra.mouhcine1@gmail.com"]
+    print(f"Sending to :\t\t{recipients}")
     print('\tGetting Parameters...')
     msgRoot = MIMEMultipart('related')
     msgRoot['Subject'] = f'Formulaire Soumis le {datetime.datetime.now().strftime("%d/%m/%Y")}'
     msgRoot['From'] = sender
-    msgRoot["To"] = receiver
+    msgRoot["To"] = ", ".join(recipients)
     password = 'Taro@987654'
     msgRoot.preamble = 'This is a multi-part message in MIME format.'
 
@@ -67,7 +68,7 @@ maweb.ma
         print('\tlogin to your account...')
         server.login(sender, password)
         print('\tSending email...')
-        server.sendmail(sender, receiver, msgRoot.as_string())
+        server.sendmail(sender, recipients, msgRoot.as_string())
         print(f'\t{colored("Email sent successfully", "green")}')
     except Exception as e:
         print(f'\tPROBLEM: {e}...\n')
