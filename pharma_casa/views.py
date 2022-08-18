@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import FileResponse
+from .sendEmail import sendEmail
 import os
 
 
@@ -22,6 +23,8 @@ def partners(request):
 
 
 def contact(request):
+    if request.method == "POST" :
+        sendEmail(Name=request.POST['Name'], Email=request.POST['Email'], Message=request.POST['Message'])
     return render(request, 'contact.html')
 
 

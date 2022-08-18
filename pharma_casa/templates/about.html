@@ -664,11 +664,52 @@
 	<script src="{% static 'js/about/main.js' %}"></script>
 	<script>
 
-	// calcul header's height
-	window.onload = function () {
-		var heightHeader = document.getElementById('heightHeader').offsetHeight;
-		document.getElementById("marginTopHeader").style.marginTop = 0+"px";
-	};
+		// calcul header's height
+		window.onload = function () {
+			var heightHeader = document.getElementById('heightHeader').offsetHeight;
+			document.getElementById("marginTopHeader").style.marginTop = 0+"px";
+		};
+
+
+		// change header onscroll
+		// transition: all .5s ease-in-out;
+
+		const ul = document.getElementsByClassName("main-header")[0].getElementsByClassName("elementskit-navbar-nav")[0].getElementsByTagName("li");
+		var styleElem = document.head.appendChild(document.createElement("style"));
+
+		window.onscroll = function() {myFunction()};
+		function myFunction() {
+			if (window.innerWidth >= 1024) {
+				if (document.documentElement.scrollTop === 0) {
+					document.getElementsByClassName("header-top")[0].style.background = "none";
+					document.getElementsByClassName("header-upper")[0].style.background = "none";
+					document.getElementsByClassName("main-header")[0].getElementsByClassName("elementskit-dropdown")[0].style.backgroundColor = "rgb(0 0 0 / 50%)";
+					document.getElementsByClassName("main-header")[0].getElementsByClassName("elementskit-dropdown")[1].style.backgroundColor = "rgb(0 0 0 / 50%)";
+					for (let i = 0; i <= ul.length - 1; i++) {
+						ul[i].getElementsByTagName("a")[0].style.color = "white";
+						ul[i].getElementsByTagName("a")[0].style.textShadow = "#000 1px 0 10px";
+					};
+					styleElem.innerHTML = ".main-header .elementskit-navbar-nav > li.elementskit-dropdown-has > a:before {color: white;}";
+					styleElem.innerHTML = ".header-upper:after {background: none;}";
+					styleElem.innerHTML = ".main-header .elementskit-navbar-nav > li > a {box-shadow: rgb(0 0 0 / 50%) 0px 20px 30px !important;}";
+				} else {
+					document.getElementsByClassName("header-top")[0].style.backgroundImage = "linear-gradient(to right, #1DB9A0 0%, #4d94c4 100%)";
+					document.getElementsByClassName("header-upper")[0].style.backgroundColor = "#ffffff";
+					document.getElementsByClassName("main-header")[0].getElementsByClassName("elementskit-dropdown")[0].style.backgroundColor = "#ffffff";
+					document.getElementsByClassName("main-header")[0].getElementsByClassName("elementskit-dropdown")[1].style.backgroundColor = "#ffffff";
+					for (let i = 0; i <= ul.length - 1; i++) {
+						ul[i].getElementsByTagName("a")[0].style.color = "black";
+						ul[i].getElementsByTagName("a")[0].style.textShadow = "none";
+					};
+					styleElem.innerHTML = ".main-header .elementskit-navbar-nav > li.elementskit-dropdown-has > a:before {color: #1cba9f;}";
+					styleElem.innerHTML = ".header-upper:after {background: -webkit-linear-gradient(left, #1DB9A0 0%, #4d94c4 100%);}";
+					styleElem.innerHTML = ".main-header .elementskit-navbar-nav > li > a {box-shadow: rgb(0 0 0 / 9%) 0px 20px 30px !important;}";
+				}
+			}
+		};
+		window.addEventListener('load', myFunction);
+
+
 	</script>
 
 </body>

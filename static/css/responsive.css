@@ -374,6 +374,9 @@
 		margin-right: 8px;
 
 	}
+	.main-header .logo-outer .logo img {
+        max-width: 100%;
+    }
 	.main-header .xs-bold-menu .xs-gradient-group span:nth-child(2){
 		width: 15px;
 	}
