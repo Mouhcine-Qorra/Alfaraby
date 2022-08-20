@@ -1,0 +1,3 @@
+git remote set-url origin https://[APPLICATION]:[NEW TOKEN FROM PAT personnal access token]@github.com/[ORGANISATION]/[REPO].git
+debug False : whitenoise
+
