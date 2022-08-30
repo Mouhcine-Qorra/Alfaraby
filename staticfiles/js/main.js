@@ -55,5 +55,5 @@ jQuery(document).ready(function ($) {
 // calcul header's height
 window.onload = function () {
     var heightHeader = document.getElementById('heightHeader').offsetHeight;
-    document.getElementById("marginTopHeader").style.marginTop = 30+heightHeader+"px";
+    document.getElementById("marginTopHeader").style.marginTop = heightHeader+"px";
 };

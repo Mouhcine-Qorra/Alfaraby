@@ -1,0 +1,90 @@
+.contains{
+    width: 1080px;
+    padding-bottom: 3rem;
+    margin: auto;
+}
+.product_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-evenly;
+}
+.review iconify-icon{
+    font-size: 14px;
+}
+.price span {
+    font-size: 22px;
+}
+.price_star{
+    display: flex;
+    justify-content: space-between;
+}
+.pro_desc{
+    font-size: 18px;
+    font-family: roboto;
+    margin-bottom: 10px !important;
+}
+.content{
+    background: rgb(252, 252, 252);
+    padding: 10px 15px;
+}
+.main_product{
+    background: rgb(252, 252, 252);
+}
+.images:hover img{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.pro_image{
+    overflow: hidden;
+    height: 450px;
+    width: 350px;
+}
+
+
+
+.wrapper{
+  position: relative;
+  margin: auto;
+  display: table;
+}
+.wrapper a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+.wrapper a span{
+  position: relative;
+  z-index: 2;
+}
+.wrapper a span iconify-icon{
+  height: 16px;
+  padding-left: 0.35rem;
+}
+.wrapper a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #47a9b0;
+  transition: all .35s;
+}
+.wrapper a:hover{
+  color: #fff;
+}
+.wrapper a:hover:after{
+  width: 100%;
+}
