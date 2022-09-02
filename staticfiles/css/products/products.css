@@ -44,9 +44,9 @@
 
 
 .wrapper{
+  left: -50%;
+  float: right;
   position: relative;
-  margin: auto;
-  display: table;
 }
 .wrapper a{
   display: block;
