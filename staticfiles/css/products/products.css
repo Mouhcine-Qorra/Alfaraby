@@ -44,9 +44,10 @@
 
 
 .wrapper{
-  left: -50%;
-  float: right;
-  position: relative;
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
 }
 .wrapper a{
   display: block;
